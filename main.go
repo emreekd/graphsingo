@@ -17,7 +17,7 @@ func main() {
 			},
 		},
 	}
-	graph := &graph.BFSGraph{  //init the graph
+	graph := &graph.DFSGraph{  //init the graph
 		Nodes: nodes,
 	}
 	// add new adjacents
@@ -25,7 +25,6 @@ func main() {
 	graph.Add(2, 4)
 	graph.Add(3, 6)
 	graph.Add(3, 7)
-	graph.Add(3, 8)
 	graph.Add(2, 8)
 	graph.Traverse() // traverse the graph
 }

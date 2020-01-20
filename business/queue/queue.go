@@ -24,6 +24,12 @@ func (q *Queue) Pop() *list.Element {
 	q.Items.Remove(item)
 	return item
 }
+func (q *Queue) PopFromBack() *list.Element {
+	var item = q.Items.Back()
+	q.Items.Remove(item)
+	return item
+}
+
 func (q *Queue) Size() int {
 	return q.Items.Len()
 }
